@@ -1,7 +1,8 @@
-package com.harshil.obviousassignment
+package com.harshil.obviousassignment.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.harshil.obviousassignment.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
