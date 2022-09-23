@@ -1,8 +1,6 @@
-package com.harshil.obviousassignment.ui.activity
+package com.harshil.obviousassignment.ui.activity.main
 
 import android.content.res.AssetManager
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import com.harshil.obviousassignment.models.ImagesModelItem
 import com.harshil.obviousassignment.utils.Utils.convert
 import kotlinx.coroutines.Dispatchers

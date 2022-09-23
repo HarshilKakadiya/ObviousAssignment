@@ -18,8 +18,4 @@ object CommonModule {
     fun getAssets(context: Application): AssetManager =
         context.assets
 
-    @Singleton
-    @Provides
-    fun getGson() = Gson()
-
 }
