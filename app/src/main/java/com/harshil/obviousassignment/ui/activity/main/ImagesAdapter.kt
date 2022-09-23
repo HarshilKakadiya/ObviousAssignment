@@ -12,7 +12,7 @@ import com.harshil.obviousassignment.models.ImagesModelItem
 
 class ImagesAdapter(
     private val itemClick: (position: Int, action: String) -> Unit = { _: Int, _: String -> }
-) : RecyclerView.Adapter<ImagesAdapter.AlbumsViewHolder>() {
+) : RecyclerView.Adapter<ImagesAdapter.ImagesViewHolder>() {
 
     private var images = mutableListOf<ImagesModelItem>()
         set(value) {
@@ -24,22 +24,22 @@ class ImagesAdapter(
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): AlbumsViewHolder {
+    ): ImagesViewHolder {
         val itemNotesBinding =
             DataBindingUtil.inflate<ItemImagesBinding>(
                 LayoutInflater.from(parent.context),
                 R.layout.item_images, parent, false
             )
-        return AlbumsViewHolder(itemNotesBinding)
+        return ImagesViewHolder(itemNotesBinding)
     }
 
-    override fun onBindViewHolder(holder: AlbumsViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ImagesViewHolder, position: Int) {
         holder.onBind(images[position], position)
     }
 
     override fun getItemCount() = images.size
 
-    inner class AlbumsViewHolder(private val binding: ItemImagesBinding) :
+    inner class ImagesViewHolder(private val binding: ItemImagesBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun onBind(imageModel: ImagesModelItem, position: Int) {
             imageModel.let {
